@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "tap"
+    "test": "tap",
+    "bundle": "rollup index.js --file bundle.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/SharpScratchy/cg-coders-strike-back#readme",
   "devDependencies": {
+    "rollup": "^2.33.3",
     "tap": "^14.11.0"
   }
 }
