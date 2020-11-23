@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/SharpScratchy/cg-coders-strike-back/issues"
   },
-  "homepage": "https://github.com/SharpScratchy/cg-coders-strike-back#readme"
+  "homepage": "https://github.com/SharpScratchy/cg-coders-strike-back#readme",
+  "devDependencies": {
+    "tap": "^14.11.0"
+  }
 }
