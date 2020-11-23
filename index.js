@@ -1,3 +1,5 @@
+import ThrustByAngle from "./src/thrust-by-angle.mjs";
+
 /**
  * Auto-generated code below aims at helping you parse
  * the standard input according to the problem statement.
@@ -22,5 +24,7 @@ while (true) {
   // You have to output the target position
   // followed by the power (0 <= thrust <= 100)
   // i.e.: "x y thrust"
-  console.log(nextCheckpointX + " " + nextCheckpointY + " 100");
+  const thrust = ThrustByAngle(nextCheckpointAngle);
+  const output = `${nextCheckpointX} ${nextCheckpointY} ${thrust}`;
+  console.log(output);
 }
