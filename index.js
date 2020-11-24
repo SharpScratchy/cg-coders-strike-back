@@ -1,9 +1,11 @@
-import ThrustByAngle from "./src/thrust-by-angle.mjs";
+import ThrustByAngleAndDistance from "./src/thrust-by-angle-and-distance.mjs";
 
 /**
  * Auto-generated code below aims at helping you parse
  * the standard input according to the problem statement.
  **/
+
+let CAN_BOOST = true;
 
 // game loop
 while (true) {
@@ -24,7 +26,16 @@ while (true) {
   // You have to output the target position
   // followed by the power (0 <= thrust <= 100)
   // i.e.: "x y thrust"
-  const thrust = ThrustByAngle(nextCheckpointAngle);
+  const thrust = ThrustByAngleAndDistance(
+    nextCheckpointAngle,
+    nextCheckpointDist,
+    CAN_BOOST
+  );
+
+  if (thrust === "BOOST") {
+    CAN_BOOST = false;
+  }
+
   const output = `${nextCheckpointX} ${nextCheckpointY} ${thrust}`;
   console.log(output);
 }
